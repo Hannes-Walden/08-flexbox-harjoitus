@@ -6,6 +6,9 @@ body {
   background-color: darkcyan;
   padding: 1rem;
 }
+p {
+  margin-block-end: 1rem;
+}
 /* vanhemman säännöt */
 .wrapper {
   display: flex;
@@ -38,9 +41,44 @@ body {
   border: 1px black solid;
   padding: 1rem;
 }
+.facebook {
+  background-color: darkblue;
+}
+.twitter {
+  background-color: black;
+}
+.email {
+  background-color: darkgray;
+}
 .main {
   background-color: darkorange;
 }
+/* Some-navigointi */
+.wrapper .some {
+  padding: 0;
+  margin-inline-start: -1rem;
+  margin-inline-end: -1rem;
+  margin-block-end: -1rem;
+}
+.some ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: lightgray;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.some ul > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  border: 1px black solid;
+  padding: 1rem;
+}
+.main {
+  background-color: darkorange;
+}
+
 .aside-1 {
   background-color: mediumseagreen;
 }
