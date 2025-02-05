@@ -1,66 +1,84 @@
 html {
-    font-size: 62.5%;
-  }
-  body {
-    font-family: "Gotham", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: darkcyan;
-    padding: 1rem;
-  }
-  /* vanhemman säännöt */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Gotham", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkcyan;
+  padding: 1rem;
+}
+/* vanhemman säännöt */
 .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 /* lapsien säännöt */
 .wrapper > * {
-    padding: 1rem;
-    flex-grow: 1;
-    flex-basis: 100%;
+  padding: 1rem;
+  flex-grow: 1;
+  flex-basis: 100%;
 }
 .header {
-    background-color: gold;
+  background-color: gold;
+}
+/* Navigointipalkki */
+.wrapper .parent {
+  padding: 0;
+}
+.parent ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: lightgray;
+  text-align: center;
+}
+.parent ul > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  border: 1px black solid;
+  padding: 1rem;
 }
 .main {
-    background-color: darkorange;
+  background-color: darkorange;
 }
 .aside-1 {
-    background-color: mediumseagreen;
+  background-color: mediumseagreen;
 }
 .aside-2 {
-    background-color: seagreen;
+  background-color: seagreen;
 }
 .footer {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 
 /* Tablet-näkymän säännöt */
 @media only screen and (min-width: 426px) {
-    body {
-      background-color: lightblue;
-    }
-    .wrapper .aside-1, .wrapper .aside-2 {
-        flex-basis: 0;
-    }
+  body {
+    background-color: lightblue;
   }
+  .wrapper .aside-1,
+  .wrapper .aside-2 {
+    flex-basis: 0;
+  }
+}
 
 /* Desktop-näkymän säännöt */
 @media only screen and (min-width: 769px) {
-    body {
-      background-color: lightcoral;
-    }
-    .wrapper .aside-1 {
-        order: 1;
-    }
-    .wrapper .main {
-        flex-basis: 0;
-        order: 2;
-        flex-grow: 2;
-    }
-    .wrapper .aside-2 {
-        order: 3;
-    }
-    .wrapper .footer {
-        order: 4;
-    }
+  body {
+    background-color: lightcoral;
   }
+  .wrapper .aside-1 {
+    order: 1;
+  }
+  .wrapper .main {
+    flex-basis: 0;
+    order: 2;
+    flex-grow: 2;
+  }
+  .wrapper .aside-2 {
+    order: 3;
+  }
+  .wrapper .footer {
+    order: 4;
+  }
+}
